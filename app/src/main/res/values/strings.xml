@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">GenericAdapter</string>
+    <string name="clicked_user_format">User <xliff:g example="Leo.Droidcoder">%1$s</xliff:g> has been clicked</string>
+
+    <string name="error_internet_connection">Check internet connection</string>
+    <string name="error_message_generic">An error occurred</string>
+    <string name="error_load_users">Failed to load users</string>
+    <string name="action_retry">Retry</string>
+</resources>

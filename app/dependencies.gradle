@@ -1,0 +1,44 @@
+configurations.all {
+    resolutionStrategy.force "com.android.support:support-annotations:$supportLibVersion"
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // support libs
+    compile "com.android.support:appcompat-v7:$supportLibVersion"
+    compile "com.android.support:recyclerview-v7:$supportLibVersion"
+    compile "com.android.support.constraint:constraint-layout:$constraintVersion"
+
+    // dagger
+    compile "com.google.dagger:dagger:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    provided "org.glassfish:javax.annotation:$javaxVersion"
+
+    // rx
+    compile "io.reactivex:rxandroid:$rxVersion"
+    compile "io.reactivex:rxjava:$rxVersion"
+
+    // misc
+    retrolambdaConfig "net.orfjackal.retrolambda:retrolambda:$retroLambdaVersion"
+
+    // ui libs
+    compile "com.github.bumptech.glide:glide:$glideVersion"
+
+    //network libs
+    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+    compile "com.google.code.gson:gson:$gsonVersion"
+
+    // development
+    compile "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
+
+    // testing
+    testCompile "junit:junit:$junitVersion"
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$espressoVersion", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+}
