@@ -14,3 +14,6 @@ public class UsersAdapter extends GenericRecyclerAdapter<User, OnRecyclerObjectC
 }
 
 Here you will find a comple code of GenericRecyclerAdapter and a sample of it's implementation.
+
+Step-by-step explanation you can find in my article:
+https://medium.com/@leonidustenko/generic-recyclerview-adapter-a69a24ec25bc 
