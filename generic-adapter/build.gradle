@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.androidCompileSdkVersion
+    buildToolsVersion rootProject.androidBuildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.androidMinSdkVersion
+        targetSdkVersion rootProject.androidTargetSdkVersion
+        versionCode rootProject.androidVersionCode
+        versionName rootProject.androidVersionName
+        testInstrumentationRunner rootProject.testInstrumentationRunner
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibVersion"
+
+    testImplementation "junit:junit:$jUnitVersion"
+    androidTestImplementation "com.android.support.test:runner:$testRunnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
+}
+
+ext {
+    bintrayRepo = 'GenericAdapter'
+    bintrayName = 'GenericAdapter'
+
+    publishedGroupId = 'com.leodroidcoder'
+    libraryName = 'Generic RecyclerView Adapter'
+    artifact = 'generic-adapter'
+
+    libraryDescription = 'Generic RecyclerView adapter. Lightweight library which helps to illuminate boilerplate code when creating RecyclerView adapters.'
+
+    siteUrl = 'https://github.com/LeoDroidCoder/generic-adapter'
+    gitUrl = 'https://github.com/LeoDroidCoder/generic-adapter.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'leodroidcoder'
+    developerName = 'Leonid Ustenko'
+    developerEmail = 'Leo.Droidcoder@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

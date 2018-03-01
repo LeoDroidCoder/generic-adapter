@@ -1,19 +1,22 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/light_green</item>
     </style>
 
-    <!--Progress bar style-->
-    <style name="ProgressBar" parent="Base.Widget.AppCompat.ProgressBar">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:indeterminate">true</item>
-        <item name="android:indeterminateDrawable">@drawable/progress</item>
+    <style name="Text" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:gravity">center_vertical</item>
     </style>
 
+    <style name="Text.Hint">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <dimen name="text_size_small">12dp</dimen>
 </resources>

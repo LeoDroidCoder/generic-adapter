@@ -1,18 +1,19 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
-apply from: "./dependencies.gradle"
 
 android {
-    compileSdkVersion rootProject.compileSdkVersion
-    buildToolsVersion rootProject.buildToolsVersion
+    compileSdkVersion rootProject.androidCompileSdkVersion
+    buildToolsVersion rootProject.androidBuildToolsVersion
+
     defaultConfig {
-        applicationId "com.leodroidcoder.recyclerviewgenericadapter"
-        minSdkVersion rootProject.minSdkVersion
-        targetSdkVersion rootProject.targetSdkVersion
-        versionCode rootProject.versionCode
-        versionName rootProject.versionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId rootProject.androidApplicationId
+        minSdkVersion rootProject.androidMinSdkVersion
+        targetSdkVersion rootProject.androidTargetSdkVersion
+        versionCode rootProject.androidVersionCode
+        versionName rootProject.androidVersionName
+        testInstrumentationRunner rootProject.testInstrumentationRunner
     }
+
+
     buildTypes {
         release {
             minifyEnabled false
@@ -21,21 +22,26 @@ android {
     }
 
     compileOptions {
-        incremental = false
-        targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
+}
 
-    testOptions {
-        unitTests.returnDefaultValues = true
-    }
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':generic-adapter')
 
-    repositories {
-        maven { url "https://jitpack.io" }
-    }
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibVersion"
 
-    retrolambda {
-        javaVersion JavaVersion.VERSION_1_7
-
+    testImplementation "junit:junit:$jUnitVersion"
+    androidTestImplementation "com.android.support.test:runner:$testRunnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
+    androidTestCompile("com.android.support.test.espresso:espresso-contrib:$espressoVersion") {
+        exclude module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude module: 'recyclerview-v7'
     }
 }

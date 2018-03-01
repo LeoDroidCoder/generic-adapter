@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/light_green"
+    android:layout_height="@dimen/item_height_normal"
+    android:foreground="?selectableItemBackground">
+
+    <TextView
+        android:id="@+id/tv_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/hint_name"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/Text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:layout_marginEnd="@dimen/spacing_normal"
+        android:layout_marginRight="@dimen/spacing_normal"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_age"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_title"
+        tools:text="Leo Droidcoder"/>
+
+    <TextView
+        android:id="@+id/tv_age_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_normal"
+        android:layout_marginRight="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/hint_age"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_age"
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:ellipsize="end"
+        android:maxLength="3"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_age_title"
+        app:layout_constraintStart_toStartOf="@id/tv_age_title"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_age_title"
+        tools:text="42"/>
+
+</android.support.constraint.ConstraintLayout>

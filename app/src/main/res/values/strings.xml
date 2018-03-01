@@ -1,9 +1,17 @@
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">GenericAdapter</string>
-    <string name="clicked_user_format">User <xliff:g example="Leo.Droidcoder">%1$s</xliff:g> has been clicked</string>
+<resources>
+    <string name="app_name">Generic Adapter</string>
 
-    <string name="error_internet_connection">Check internet connection</string>
-    <string name="error_message_generic">An error occurred</string>
-    <string name="error_load_users">Failed to load users</string>
-    <string name="action_retry">Retry</string>
+    <string name="title_simple_adapter">Simple adapter</string>
+    <string name="title_multiple_viewtypes">Multiple view types</string>
+    <string name="title_multiple_buttons">Multiple buttons</string>
+    <string name="title_difutil">Diffutil</string>
+
+    <string name="action_greet">Greet</string>
+    <string name="action_simple_adapter">Simple adapter sample</string>
+    <string name="action_multiple_viewtypes">Multiple view types sample</string>
+    <string name="action_multiple_buttons">Multiple buttons sample</string>
+    <string name="action_difutil">Diffutil sample</string>
+
+    <string name="hint_name">Name</string>
+    <string name="hint_age">Age</string>
 </resources>

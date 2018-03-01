@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/spacing_normal"
+    tools:context="com.leodroidcoder.genericadaptersample.MainActivity">
+
+    <Button
+        android:id="@+id/btn_simple"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/action_simple_adapter"
+        app:layout_constraintBottom_toTopOf="@+id/btn_multiple_viewtypes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <Button
+        android:id="@+id/btn_multiple_viewtypes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:text="@string/action_multiple_viewtypes"
+        app:layout_constraintBottom_toTopOf="@+id/btn_multiple_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_simple"
+        />
+
+    <Button
+        android:id="@+id/btn_multiple_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:text="@string/action_multiple_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/btn_diffutil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_multiple_viewtypes"
+        />
+
+    <Button
+        android:id="@+id/btn_diffutil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:text="@string/action_difutil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_multiple_buttons"
+        />
+
+</android.support.constraint.ConstraintLayout>
