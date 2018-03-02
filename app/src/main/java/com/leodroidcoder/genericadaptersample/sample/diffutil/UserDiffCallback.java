@@ -44,7 +44,7 @@ public class UserDiffCallback extends BaseDiffCallback<User> {
      */
     @Override
     public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
-        return getOldItems().get(oldItemPosition) == getNewItems().get(newItemPosition);
+        return getOldItems().get(oldItemPosition).getId() == getNewItems().get(newItemPosition).getId();
     }
 
     /**
