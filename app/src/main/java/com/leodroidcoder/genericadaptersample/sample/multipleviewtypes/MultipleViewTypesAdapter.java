@@ -26,7 +26,8 @@ import com.leodroidcoder.genericadaptersample.model.User;
 import com.leodroidcoder.genericadaptersample.sample.common.UserViewHolder;
 
 /**
- * Generic adapter {@link GenericRecyclerViewAdapter} implementation with multiple view types
+ * Generic adapter {@link GenericRecyclerViewAdapter} implementation with multiple view types.
+ * Note that the abstract {@link BaseViewHolder} used here instead of a concrete implementation, in order to let {@link #onCreateViewHolder(ViewGroup, int)} return different ViewHolders (each for a concrete viewType)
  *
  * @author Leonid Ustenko (Leo.Droidcoder@gmail.com)
  * @since 1.0.0
