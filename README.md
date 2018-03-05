@@ -115,6 +115,7 @@ Just use it as a regular adapter in your Fragment or Activity:
 - with DiffUtil
 
 #### Checkout complete samples, including all these use cases.
-
+#### Or read an article with the detailed explanation:
+https://medium.com/@leo.droidcoder/recyclerview-adapter-a-piece-of-cake-with-the-generic-adapter-766cedffd81
 
 ### Enjoy!
