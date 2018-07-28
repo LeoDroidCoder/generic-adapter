@@ -61,7 +61,7 @@ public abstract class BaseViewHolder<T, L extends BaseRecyclerListener> extends 
      * @author Leonid Ustenko (Leo.Droidcoder@gmail.com)
      * @since 1.0.0
      */
-    public void onBind(T item, List<String> payloads) {
+    public void onBind(T item, List<Object> payloads) {
         onBind(item);
     }
 

@@ -23,7 +23,6 @@ package com.leodroidcoder.genericadapter;
  * @author Leonid Ustenko (Leo.Droidcoder@gmail.com)
  * @since 1.0.0
  */
-@Deprecated
 public interface OnEntityClickListener<T> extends BaseRecyclerListener {
 
     /**

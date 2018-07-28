@@ -23,8 +23,8 @@ allprojects {
     ext {
         //Android
         androidApplicationId = 'com.leodroidcoder.genericadapter'
-        androidVersionCode = 1
-        androidVersionName = "1.0.0"
+        androidVersionCode = 2
+        androidVersionName = "1.0.1"
         androidBuildToolsVersion = '27.0.1'
         androidMinSdkVersion = 14
         androidTargetSdkVersion = 27

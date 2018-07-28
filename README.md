@@ -9,7 +9,7 @@ Creating adapters is as easy as never before, just follow the steps below:
 #### 1. Add dependency to your build.gradle (app-level).
 
     dependencies {
-        implementation "com.leodroidcoder:generic-adapter:1.0.0"
+        implementation "com.leodroidcoder:generic-adapter:1.0.1"
     }
 
 #### 2. Create a ViewHolder:
@@ -41,8 +41,8 @@ Creating adapters is as easy as never before, just follow the steps below:
         private val nameTv: TextView? = itemView.tv_name
 
         init {
-            listener?.let {
-                itemView.setOnClickListener { listener.onItemClick(adapterPosition) }
+            listener?.run {
+                itemView.setOnClickListener { onItemClick(adapterPosition) }
             }
         }
 

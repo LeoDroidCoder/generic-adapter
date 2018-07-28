@@ -44,7 +44,7 @@ ext {
     siteUrl = 'https://github.com/LeoDroidCoder/generic-adapter'
     gitUrl = 'https://github.com/LeoDroidCoder/generic-adapter.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'leodroidcoder'
     developerName = 'Leonid Ustenko'

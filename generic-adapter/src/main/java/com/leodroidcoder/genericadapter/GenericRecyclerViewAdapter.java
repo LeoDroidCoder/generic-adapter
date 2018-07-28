@@ -88,6 +88,9 @@ public abstract class GenericRecyclerViewAdapter<T, L extends BaseRecyclerListen
      */
     @Override
     public void onBindViewHolder(VH holder, int position) {
+        if (items.size() <= position) {
+            return;
+        }
         T item = items.get(position);
         holder.onBind(item);
     }
@@ -142,7 +145,7 @@ public abstract class GenericRecyclerViewAdapter<T, L extends BaseRecyclerListen
      * @param newItems new items
      */
     public void updateItems(List<T> newItems) {
-        setItems(items, false);
+        setItems(newItems, false);
     }
 
     /**
